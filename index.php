@@ -7,6 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Ciao</h1>
+    <form action="greeting.php" method="GET">
+        <label for="word">Word</label>
+        <input type="text" id="word" name="word" >
+
+        <label for="text">Text</label>
+        <textarea type="text" id="text" name="text" >
+
+        </textarea>
+
+        <button type="submit" >Submit</button>
+        
+    </form>
+
+    <hr>
 </body>
 </html>
