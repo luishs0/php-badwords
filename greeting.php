@@ -1,6 +1,9 @@
 <?php 
 $word = $_GET["word"];
 $text = $_GET["text"];
+$length = strlen($text);
+$new_text = str_replace($word, "***", $text); 
+$new_length = strlen($new_text);
 ?>
 
 <!DOCTYPE html>
@@ -13,11 +16,21 @@ $text = $_GET["text"];
 </head>
 <body>
     
-    <h2> Word </h2>
-    <p> <?php echo $word; ?> </p>
+    <!-- <h2> Parola </h2>
+    <p> <?php echo $word; ?> </p> -->
 
-    <h2>Text</h2>
+    <h3>Paragrafo</h3>
     <p> <?php echo $text; ?> </p>
+
+    <p> Lunghezza: <?php echo $length; ?> </p>
+
+    <h3>Paragrafo senza la parola</h3>
+    <p>
+        <?php echo $new_text; ?> 
+    </p>
+    <p>
+        Lunghezza: <?php echo $new_length; ?>
+    </p>
 
 </body>
 </html>
